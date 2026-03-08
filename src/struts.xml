@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+    
+<struts>
+	<package name="debitCreditApp" extends="struts-default">
+		<!--<interceptors>
+			<interceptor class="interceptors.LoginInterceptor"
+				name="loginInterceptor"	/>
+			<interceptor-stack name="loginStack">
+				<interceptor-ref name="loginInterceptor"/>
+				<interceptor-ref name="defaultStack"/>
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="loginStack"></default-interceptor-ref> -->
+		
+		<action name="StartpageAction" class="action.StartpageAction">
+			<result name="success" >/adminLogin.jsp</result>
+		</action>
+		
+		<action name="StartpageActionUser" class="action.StartpageAction">
+			<result name="success" >/userLogin.jsp</result>
+		</action>
+		
+		<action name="AdminloginAction" class="action.AdminLoginAction">
+			<result name="success" type="redirect">/adminWelcomAction</result>
+			<result name="input">/adminLogin.jsp</result>
+		</action>
+		
+		<action name="adminWelcomAction" class="action.AdminWelcomAction">
+			<result name="success">/adminWelcome.jsp</result>
+			<result name="input">/deleteError.jsp</result>
+		</action>
+		
+		<action name="UserloginAction" class="action.UserLoginAction">
+			<result name="success" type="redirect">/userWelcomeAction</result>
+			<result name="input">/userLogin.jsp</result>
+		</action>
+		
+		<action name="userWelcomeAction" class="action.UserWelcomeAction">
+			<result name="success">/userWelcome.jsp</result>
+			<result name="input">/userLogin.jsp</result>
+		</action>
+		
+		<action name="userLogoutAction" class="action.UserLogoutAction">
+			<result name="input">/userLogin.jsp</result>
+		</action>
+		
+		<action name="addCustomerAction" class="action.AddCustomerAction">
+			<result name="success" type="redirect">/userWelcomeAction</result>
+			<result name="error">/addError.jsp</result>
+			<result name="input">/addCustomer.jsp</result>
+		</action>
+		
+		<action name="deleteCustomerAction" class="action.DeleteCustomeAction">
+			<result name="success" type="redirect">/userWelcomeAction</result>
+			<result name="error">/deleteError.jsp</result>
+		</action>
+		
+		<action name="updateCustomerDataAction" class="action.UpdateCustomerDataAction">
+			<result name="success">/updateCustomer.jsp</result>
+			<result name="error">/deleteError.jsp</result>
+		</action>
+		
+		<action name="updateCustomerAction" class="action.UpdateCustomerAction">
+			<result name="success" type="redirect">/userWelcomeAction</result>
+			<result name="error">/deleteError.jsp</result>
+			<result name="input">/updateCustomer.jsp</result>
+		</action>
+		
+		<action name="searchByAccAction" class="action.SearchByAccAction">
+			<result name="success">/searchedCustomer.jsp</result>
+			<result name="error">/deleteError.jsp</result>
+		</action>
+		
+		<action name="withdrawDataAction" class="action.WithdrawDataAction">
+			<result name="success">/withdraw.jsp</result>
+			<result name="error">/deleteError.jsp</result>
+		</action>
+		
+		<action name="withDrawAction" class="action.WithDrawAction">
+			<result name="success">/searchedCustomer.jsp</result>
+			<result name="error">/withDrawErrror.jsp</result>
+		</action>
+		
+		<action name="depositDataAction" class="action.DepositDataAction">
+			<result name="success">/deposite.jsp</result>
+			<result name="error">/deleteError.jsp</result>
+		</action>
+		
+		<action name="depositAction" class="action.DepositeAction">
+			<result name="success">/searchedCustomer.jsp</result>
+			<result name="error">/deleteError.jsp</result>
+		</action>
+		
+		<action name="profileAction" class="action.ProfileAction">
+			<result name="success">/userProfile.jsp</result>
+		</action>
+		
+		<action name="updatePasswordDataAction" class="action.UpdatePasswordDataAction">
+			<result name="success">updatePass.jsp</result>
+		</action>
+		
+		<action name="updatePasswordAction" class="action.UpdatePasswordAction">
+			<result name="success">passUpdateSuccessful.jsp</result>
+		</action>
+		
+		<action name="searchByEmailAction" class="action.SearchByEmailAction">
+			<result name="success">/searchedEmployee.jsp</result>
+			<result name="error">/deleteError.jsp</result>
+		</action>
+		
+		<action name="empToUserAction" class="action.EmpToUserAction">
+			<result name="success">/userFromiAdmin.jsp</result>
+			<result name="error">/noAccount.jsp</result>
+		</action>
+		
+		<action name="updatePasswordDataByAdminAction" class="action.UpdatePasswordDataByAdminAction">
+			<result name="success">updatePassByAdmiin.jsp</result>
+			<result name="error">/adminWelcom.jsp</result>
+		</action>
+		<action name="updatePasswordByAdminAction" class="action.UpdatePasswordByAdminAction">
+			<result name="success">passUpdateSuccessful.jsp</result>
+		</action>
+		
+		<action name="createUserAccDataAction" class="action.CreateUserAccDataAction">
+			<result name="success">/createUser.jsp</result>
+		</action>
+		
+		<action name="addUserAndSendEmailAction" class="action.AddUserAndSendEmailAction">
+			<result name="success">/emailSuccessful.jsp</result>
+			<result name="input">/emailError.jsp</result>
+		</action>
+		
+		<action name="adminLogoutAction" class="action.AdminLogoutAction">
+			<result name="input">/adminLogin.jsp</result>
+		</action>
+		
+	</package>
+</struts>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC "-//Apache Struts//XWork Validator 1.0.3//EN"
+ "http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+ 
+ <validators>
+ 	<validator type="requiredstring">
+ 		<param name="fieldName">name</param>
+ 		<message>Customer name is Required</message>
+ 	</validator>
+ 	
+ 	<validator type="requiredstring">
+ 		<param name="fieldName">dob</param>
+ 		<message>Date of Birth is Required</message>
+ 	</validator>
+ 	
+ 	<validator type="required">
+ 		<param name="fieldName">nid</param>
+ 		<message>NID number is Required</message>
+ 	</validator>
+ 	
+ 	<validator type="requiredstring">
+ 		<param name="fieldName">fathers_name</param>
+ 		<message>Fathers name is Required</message>
+ 	</validator>
+ 	
+ 	<validator type="requiredstring">
+ 		<param name="fieldName">mothers_name</param>
+ 		<message>Mothers name is Required</message>
+ 	</validator>
+ 	
+ 	<validator type="required">
+ 		<param name="fieldName">phone</param>
+ 		<message>Phone number is Required</message>
+ 	</validator>
+ 	
+ 	
+ 	
+ 	<validator type="requiredstring">
+ 		<param name="fieldName">email</param>
+ 		<message>Email is Required</message>
+ 	</validator>
+ 	<validator type="email">
+ 		<param name="fieldName">email</param>
+ 		<message>must provide a valid email</message>
+ 	</validator>
+ 	
+ 	
+ 	
+ 	<validator type="required">
+ 		<param name="fieldName">accountNo</param>
+ 		<message>Account number is Required</message>
+ 	</validator>
+ 	
+ 	
+ 	<validator type="required">
+ 		<param name="fieldName">accountBalance</param>
+ 		<message>Insert a balance</message>
+ 	</validator>
+ 		<validator type="int">
+ 		<param name="fieldName">accountBalance</param>
+ 		<param name="min">500</param>
+ 		<message>Amount should above ${min}</message>
+ 	</validator>
+ 	
+ </validators>
