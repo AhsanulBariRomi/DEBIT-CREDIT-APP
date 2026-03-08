@@ -1,0 +1,28 @@
+@charset "ISO-8859-1";
+
+body {
+	font-family: Arial;
+	background-color: #f4f4f4;
+}
+
+.actionBtn {
+    background-color: #217daf;
+    font-size:xx-large;
+    font-weight: bold;
+    padding: 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.actionBtn:hover {
+	 background-color: #3d74d2;
+}
+
+.loginForm {
+	background-color: #d5dbe4;
+	border-spacing: 15px;
+	width:330px;
+	margin-top:10px;
+}
